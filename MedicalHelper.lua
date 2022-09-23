@@ -26,8 +26,8 @@ local sampfuncsNot = [[
 О том как внести в исключение папку воспользуйтесь интернетом.
 3. Произведите повторную установку скрипта.
 
-При возникновении проблем обращайтесь в сообщение группы:
-		vk.me/hatiko_scripts
+При возникновении проблем обращайтесь в ВК:
+		vk.com/tvoybywshiy
 
 Игра была свернута, поэтому можете продолжить играть. 
 ]]
@@ -47,8 +47,8 @@ local errorText = [[
 О том как внести в исключение папку воспользуйтесь интернетом.
 3. Произведите повторную установку скрипта.
 
-При возникновении проблем обращайтесь в сообщение группы:
-		vk.me/hatiko_scripts
+При возникновении проблем обращайтесь в ВК:
+		vk.com/tvoybywshiy
 
 Игра была свернута, поэтому можете продолжить играть. 
 ]]
@@ -1914,9 +1914,7 @@ function imgui.OnDrawFrame()
 					imgui.TextWrapped(u8"\tСкрипт был разработан для проекта Ariona Role Play с поддержкой работы на сервере Saint Rose для облегчения работы сотрудникам больниц. Благодаря этому приложению Вы получите полный комплекс автоматизации многих действий и наслаждение от пользования.\nОбновления выходят по мере добавления нововведений и исправлений ошибок.")
 					imgui.Dummy(imgui.ImVec2(0, 10))
 					imgui.Bullet()
-					imgui.TextColoredRGB("Разработчик - {FFB700}Kevin Hatiko")
-					imgui.Bullet()
-					imgui.TextColoredRGB("Редактор Скрипта - {FFB700}Kyle Morgan")
+					imgui.TextColoredRGB("Разработчик - {FFB700}Kevin Hatiko {ffffff}| Редактор Скрипта - {FFB700}Kyle Morgan")
 					imgui.Bullet()
 					imgui.TextColoredRGB("Версия скрипта - {FFB700}".. scr.version)
 					imgui.Bullet()
@@ -1929,19 +1927,17 @@ function imgui.OnDrawFrame()
 						imgui.SetCursorPosX(20)
 						imgui.Text(fa.ICON_LINK)
 						imgui.SameLine()
-						imgui.TextColoredRGB("Для связи: VK: {74BAF4}vk.com/hatiko_scripts") --или Discord - {74BAF4}TheVitek#2160")
+						imgui.TextColoredRGB("Для связи: VK: {74BAF4}vk.com/tvoybywshiy") --или Discord - {74BAF4}Humans#0110")
 							if imgui.IsItemHovered() then imgui.SetTooltip(u8"Кликните ЛКМ, чтобы скопировать, или ПКМ, чтобы открыть в браузере")  end
-							if imgui.IsItemClicked(0) then setClipboardText("https://vk.com/hatiko_scripts") end
-							if imgui.IsItemClicked(1) then print(shell32.ShellExecuteA(nil, 'open', 'https://vk.com/hatiko_scripts', nil, nil, 1)) end
+							if imgui.IsItemClicked(0) then setClipboardText("https://vk.com/tvoybywshiy") end
+							if imgui.IsItemClicked(1) then print(shell32.ShellExecuteA(nil, 'open', 'https://vk.com/tvoybywshiy', nil, nil, 1)) end
 							imgui.SameLine()
 							imgui.TextColoredRGB("{68E15D}(наведи){FFFFFF}  Нажав в группе на {74BAF4}\"Написать сообщение\"")
 						imgui.Spacing()
 						imgui.SetCursorPosX(20)
 						imgui.TextColored(imgui.ImColor(18, 220, 0, 200):GetVec4(), fa.ICON_MONEY)
 						imgui.SameLine()
-						imgui.TextColoredRGB("Желающие поддержать разработку денюшкой - ".."{68E15D}\"Открыть\"")
-							if imgui.IsItemHovered() then imgui.SetTooltip(u8"Кликните, чтобы открыть ссылку")  end
-							if imgui.IsItemClicked(0) then print(shell32.ShellExecuteA(nil, 'open', 'https://qiwi.me/56481f57-738e-4476-afde-cee364eb7f46', nil, nil, 1)) end
+						imgui.TextColoredRGB("Скрипт работает на БЕСПЛАТНОЙ основе! Все сделано для МЗ!")
 							
 						imgui.Dummy(imgui.ImVec2(0, 130))
 						if imgui.Button(u8"Отключить", imgui.ImVec2(160, 20)) then showCursor(false); scr:unload() end
